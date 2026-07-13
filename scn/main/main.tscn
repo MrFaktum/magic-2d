@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://btds3x5i2bmte"]
+
+[ext_resource type="Script" uid="uid://cw32qoltfn5qt" path="res://scn/main/main.gd" id="1_y4fp4"]
+
+[node name="Main" type="Control" unique_id=455480189]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y4fp4")
+
+[node name="Panel" type="Panel" parent="." unique_id=1428924658]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1275825644]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="Panel/VBoxContainer" unique_id=1964664280]
+layout_mode = 2
+text = "Играть
+"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Play" to="." method="_on_play_pressed"]

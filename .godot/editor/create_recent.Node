@@ -1,0 +1,15 @@
+CanvasLayer
+VirtualJoystick
+TileMapLayer
+TileMap
+AnimatedSprite2D
+Sprite2D
+Camera2D
+CollisionShape2D
+CharacterBody2D
+Panel
+Button
+VBoxContainer
+BoxContainer
+Control
+Container

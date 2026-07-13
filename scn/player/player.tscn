@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://c1tv2ue6g5new"]
+
+[ext_resource type="Texture2D" uid="uid://bal04iwjidpqu" path="res://assets/playerWizard/Idle.png" id="1_4l2mt"]
+[ext_resource type="Script" uid="uid://cytpegtar30v1" path="res://scn/player/player.gd" id="1_5k6xf"]
+[ext_resource type="Texture2D" uid="uid://c6ixtqxixaj65" path="res://assets/playerWizard/Run.png" id="3_b8k3h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc6d"]
+size = Vector2(10, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5k6xf"]
+atlas = ExtResource("1_4l2mt")
+region = Rect2(0, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8k3h"]
+atlas = ExtResource("1_4l2mt")
+region = Rect2(231, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcdqb"]
+atlas = ExtResource("1_4l2mt")
+region = Rect2(462, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdbhw"]
+atlas = ExtResource("1_4l2mt")
+region = Rect2(693, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1arm"]
+atlas = ExtResource("1_4l2mt")
+region = Rect2(924, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kq1b"]
+atlas = ExtResource("1_4l2mt")
+region = Rect2(1155, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufis8"]
+atlas = ExtResource("3_b8k3h")
+region = Rect2(0, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbaik"]
+atlas = ExtResource("3_b8k3h")
+region = Rect2(231, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8171"]
+atlas = ExtResource("3_b8k3h")
+region = Rect2(462, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjebe"]
+atlas = ExtResource("3_b8k3h")
+region = Rect2(693, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjv32"]
+atlas = ExtResource("3_b8k3h")
+region = Rect2(924, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfgjt"]
+atlas = ExtResource("3_b8k3h")
+region = Rect2(1155, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64x1a"]
+atlas = ExtResource("3_b8k3h")
+region = Rect2(1386, 0, 231, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1isju"]
+atlas = ExtResource("3_b8k3h")
+region = Rect2(1617, 0, 231, 190)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7b7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5k6xf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8k3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcdqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdbhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1arm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kq1b")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufis8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbaik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8171")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjebe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjv32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfgjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64x1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1isju")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 10.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=809084719]
+script = ExtResource("1_5k6xf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1452937313]
+shape = SubResource("RectangleShape2D_gyc6d")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1818080944]
+zoom = Vector2(3, 3)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = 0.2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=930483061]
+position = Vector2(4, -2.7)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_g7b7a")
+animation = &"idle"
+autoplay = "idle"
+frame = 2
+frame_progress = 0.02257745
+
+[node name="Ui" type="CanvasLayer" parent="." unique_id=319581582]
+
+[node name="VirtualJoystick" type="VirtualJoystick" parent="Ui" unique_id=1850889001]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = -140.0
+offset_right = 140.0
+offset_bottom = -100.0
+grow_vertical = 0
