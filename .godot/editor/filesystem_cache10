@@ -21,11 +21,11 @@ Tilemap_color5.png::CompressedTexture2D::6158447219856596926::1783933152::178393
 Water Background color.png::CompressedTexture2D::4237785973450579714::1783933152::1783933152::1::::<><><>0<>0<>1e0ae2d084a186db9fc01ffeb76478c1<>res://.godot/imported/Water Background color.png-d7965ca2071626b0a87ce516c6c694b5.ctex::
 Water Foam.png::CompressedTexture2D::1713650905591882253::1783933152::1783933152::1::::<><><>0<>0<>5216e26fc0ec18b8647125c799780a5f<>res://.godot/imported/Water Foam.png-01e0d4650c8b30962edbe5aa63b8c620.ctex::
 ::res://scn/::1783933152
-::res://scn/level1/::1783933152
-level_1.tscn::PackedScene::8123003458550165996::1783933152::0::1::::<><><>0<>0<><>::uid://bsmmtmt4v6dt6::::res://assets/tileset/Tilemap_color2.png<>uid://c1tv2ue6g5new::::res://scn/player/player.tscn
-::res://scn/main/::1783933152
+::res://scn/level1/::1789773944
+level_1.tscn::PackedScene::8123003458550165996::1789773944::0::1::::<><><>0<>0<><>::uid://bsmmtmt4v6dt6::::res://assets/tileset/Tilemap_color2.png<>uid://c1tv2ue6g5new::::res://scn/player/player.tscn
+::res://scn/main/::1789774582
 main.gd::GDScript::6376467189234012675::1783933152::0::1::::<>Control<><>0<>0<><>::
-main.tscn::PackedScene::3727346008957833202::1783933152::0::1::::<><><>0<>0<><>::uid://cw32qoltfn5qt::::res://scn/main/main.gd
-::res://scn/player/::1783933152
+main.tscn::PackedScene::3727346008957833202::1789774582::0::1::::<><><>0<>0<><>::uid://cw32qoltfn5qt::::res://scn/main/main.gd
+::res://scn/player/::1789777628
 player.gd::GDScript::6497515034608464248::1783933152::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::6638298810649638786::1783933152::0::1::::<><><>0<>0<><>::uid://bal04iwjidpqu::::res://assets/playerWizard/Idle.png<>uid://cytpegtar30v1::::res://scn/player/player.gd<>uid://c6ixtqxixaj65::::res://assets/playerWizard/Run.png
+player.tscn::PackedScene::6638298810649638786::1789777628::0::1::::<><><>0<>0<><>::uid://bal04iwjidpqu::::res://assets/playerWizard/Idle.png<>uid://cytpegtar30v1::::res://scn/player/player.gd<>uid://c6ixtqxixaj65::::res://assets/playerWizard/Run.png

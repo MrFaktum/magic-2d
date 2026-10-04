@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bal04iwjidpqu" path="res://assets/playerWizard/Idle.png" id="1_4l2mt"]
 [ext_resource type="Script" uid="uid://cytpegtar30v1" path="res://scn/player/player.gd" id="1_5k6xf"]
 [ext_resource type="Texture2D" uid="uid://c6ixtqxixaj65" path="res://assets/playerWizard/Run.png" id="3_b8k3h"]
+[ext_resource type="Script" uid="uid://by0uh42i6233x" path="res://scn/player/virtual_joystick_skills.gd" id="4_fdbhw"]
+[ext_resource type="Script" uid="uid://coj3jgfsk3i6d" path="res://scn/player/wall.gd" id="4_tcdqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc6d"]
 size = Vector2(10, 40)
@@ -120,6 +122,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=809084719]
 script = ExtResource("1_5k6xf")
+metadata/_edit_vertical_guides_ = [60.0, 36.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1452937313]
 shape = SubResource("RectangleShape2D_gyc6d")
@@ -141,12 +144,43 @@ frame_progress = 0.02257745
 
 [node name="Ui" type="CanvasLayer" parent="." unique_id=319581582]
 
-[node name="VirtualJoystick" type="VirtualJoystick" parent="Ui" unique_id=1850889001]
+[node name="VirtualJoystickRun" type="VirtualJoystick" parent="Ui" unique_id=1850889001]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 100.0
 offset_top = -140.0
-offset_right = 140.0
-offset_bottom = -100.0
+offset_right = 150.0
+offset_bottom = -90.0
 grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+
+[node name="VirtualJoystickSkills" type="VirtualJoystick" parent="Ui" unique_id=160580699]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -140.0
+offset_right = -120.0
+offset_bottom = -90.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+action_left = &"skills_left"
+action_right = &"skills_right"
+action_up = &"skills_up"
+action_down = &"skills_down"
+script = ExtResource("4_fdbhw")
+
+[node name="Scripts" type="Node" parent="." unique_id=1666392708]
+
+[node name="Wall" type="Node" parent="Scripts" unique_id=1599717730]
+script = ExtResource("4_tcdqb")
+
+[node name="Aim" type="Polygon2D" parent="." unique_id=682073181]
+offset = Vector2(50, 0)
+polygon = PackedVector2Array(0, 4, 4, 0, 0, -4)
+
+[connection signal="flicked" from="Ui/VirtualJoystickSkills" to="Ui/VirtualJoystickSkills" method="_on_flicked"]

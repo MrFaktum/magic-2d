@@ -27,9 +27,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Control" type="Control" parent="Panel/VBoxContainer" unique_id=1092474364]
+layout_mode = 2
+size_flags_vertical = 3
+
 [node name="Play" type="Button" parent="Panel/VBoxContainer" unique_id=1964664280]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Играть
 "
+
+[node name="Control2" type="Control" parent="Panel/VBoxContainer" unique_id=671213832]
+layout_mode = 2
+size_flags_vertical = 3
 
 [connection signal="pressed" from="Panel/VBoxContainer/Play" to="." method="_on_play_pressed"]

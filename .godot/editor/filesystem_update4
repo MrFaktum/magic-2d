@@ -1,0 +1,3 @@
+res://scn/player/player.tscn
+res://scn/player/virtual_joystick_run.gd
+res://scn/player/virtual_joystick_skills.gd

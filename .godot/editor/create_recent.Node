@@ -1,3 +1,6 @@
+Polygon2D
+Control
+Node
 CanvasLayer
 VirtualJoystick
 TileMapLayer
@@ -10,6 +13,3 @@ CharacterBody2D
 Panel
 Button
 VBoxContainer
-BoxContainer
-Control
-Container
