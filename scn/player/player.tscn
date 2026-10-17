@@ -121,6 +121,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=809084719]
+z_index = 2
 script = ExtResource("1_5k6xf")
 metadata/_edit_vertical_guides_ = [60.0, 36.0]
 

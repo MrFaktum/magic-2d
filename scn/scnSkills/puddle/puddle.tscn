@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bm58y5281emmn"]
+
+[ext_resource type="Script" uid="uid://biwoa1k1gaowf" path="res://scn/scnSkills/puddle/puddle.gd" id="1_2bfxv"]
+[ext_resource type="Script" uid="uid://c56foc21rfg4j" path="res://scn/scnSkills/puddle/draw.gd" id="2_ovy16"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5pn5c"]
+radius = 50.0
+
+[node name="Puddle" type="Area2D" unique_id=1548002838]
+z_index = 1
+script = ExtResource("1_2bfxv")
+
+[node name="Draw" type="Node2D" parent="." unique_id=468411998]
+script = ExtResource("2_ovy16")
+puddle_color = Color(0.2, 0.22745098, 0.039215688, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=596288233]
+shape = SubResource("CircleShape2D_5pn5c")
