@@ -3,8 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://bal04iwjidpqu" path="res://assets/playerWizard/Idle.png" id="1_4l2mt"]
 [ext_resource type="Script" uid="uid://cytpegtar30v1" path="res://scn/player/player.gd" id="1_5k6xf"]
 [ext_resource type="Texture2D" uid="uid://c6ixtqxixaj65" path="res://assets/playerWizard/Run.png" id="3_b8k3h"]
-[ext_resource type="Script" uid="uid://dswsqihcvxj76" path="res://scn/player/playerSkills/skills_manager.gd" id="4_fdbhw"]
+[ext_resource type="Script" uid="uid://dswsqihcvxj76" path="res://scn/player/playerSkills/spells_manager.gd" id="4_fdbhw"]
+[ext_resource type="Script" uid="uid://b18p3qallcalt" path="res://scn/player/playerSkills/spell_heal.gd" id="5_pbaik"]
+[ext_resource type="Script" uid="uid://duef17vwsxc7h" path="res://scn/player/playerSkills/spawn_projectile.gd" id="5_ufis8"]
 [ext_resource type="Script" uid="uid://dinuf6bahbk2v" path="res://scn/player/aim.gd" id="6_m1arm"]
+[ext_resource type="Script" uid="uid://coj3jgfsk3i6d" path="res://scn/player/playerSkills/spawn_wall.gd" id="6_pbaik"]
+[ext_resource type="Script" uid="uid://bwnp35mt0ihjq" path="res://scn/player/playerSkills/spawn_puddle.gd" id="7_p8171"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc6d"]
 size = Vector2(10, 40)
@@ -151,7 +155,7 @@ offset_top = 100.0
 offset_right = 180.0
 offset_bottom = 180.0
 theme_override_font_sizes/font_size = 50
-text = "1"
+text = "A"
 
 [node name="ButtonSkillsB" type="Button" parent="Ui" unique_id=1230051395]
 offset_left = 300.0
@@ -159,7 +163,7 @@ offset_top = 200.0
 offset_right = 380.0
 offset_bottom = 280.0
 theme_override_font_sizes/font_size = 50
-text = "2"
+text = "B"
 
 [node name="VirtualJoystickRun" type="VirtualJoystick" parent="Ui" unique_id=1850889001]
 anchors_preset = 2
@@ -190,17 +194,33 @@ action_right = &"skills_right"
 action_up = &"skills_up"
 action_down = &"skills_down"
 
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Ui" unique_id=346568878]
+
 [node name="Scripts" type="Node" parent="." unique_id=1666392708]
 
-[node name="SkillsManager" type="Node" parent="Scripts" unique_id=2088559526]
+[node name="SpellsManager" type="Node" parent="Scripts" unique_id=2088559526 node_paths=PackedStringArray("projectile_spawner", "puddle_spawner", "wall_spawner", "heal_spell")]
 script = ExtResource("4_fdbhw")
+projectile_spawner = NodePath("../SpawnProjectile")
+puddle_spawner = NodePath("../SpawnPuddle")
+wall_spawner = NodePath("../SpawnWall")
+heal_spell = NodePath("../SpellHeal")
+
+[node name="SpawnProjectile" type="Node" parent="Scripts" unique_id=327568578]
+script = ExtResource("5_ufis8")
+
+[node name="SpawnPuddle" type="Node" parent="Scripts" unique_id=1579134057]
+script = ExtResource("7_p8171")
 
 [node name="SpawnWall" type="Node" parent="Scripts" unique_id=1599717730]
+script = ExtResource("6_pbaik")
+
+[node name="SpellHeal" type="Node" parent="Scripts" unique_id=1245481550]
+script = ExtResource("5_pbaik")
 
 [node name="Aim" type="Polygon2D" parent="." unique_id=682073181]
 offset = Vector2(50, 0)
 polygon = PackedVector2Array(0, 4, 4, 0, 0, -4)
 script = ExtResource("6_m1arm")
 
-[connection signal="pressed" from="Ui/ButtonSkillsA" to="Scripts/SkillsManager" method="_on_button_skills_a_pressed"]
-[connection signal="pressed" from="Ui/ButtonSkillsB" to="Scripts/SkillsManager" method="_on_button_skills_b_pressed"]
+[connection signal="pressed" from="Ui/ButtonSkillsA" to="Scripts/SpellsManager" method="_on_button_skills_a_pressed"]
+[connection signal="pressed" from="Ui/ButtonSkillsB" to="Scripts/SpellsManager" method="_on_button_skills_b_pressed"]
