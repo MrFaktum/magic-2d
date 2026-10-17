@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cjm4a1tk3ogk5"]
+
+[ext_resource type="Script" uid="uid://ddwglbsilv4e4" path="res://scn/scnSkills/wall/wall.gd" id="1_qh45a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvhbo"]
+size = Vector2(5, 100)
+
+[node name="Wall" type="StaticBody2D" unique_id=1857648468]
+script = ExtResource("1_qh45a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1509324525]
+shape = SubResource("RectangleShape2D_wvhbo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=960553434]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.5
+offset_top = -50.0
+offset_right = 2.5
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2

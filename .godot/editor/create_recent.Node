@@ -1,3 +1,6 @@
+ColorRect
+CollisionShape2D
+StaticBody2D
 Node
 Button
 Polygon2D
@@ -9,6 +12,4 @@ TileMap
 AnimatedSprite2D
 Sprite2D
 Camera2D
-CollisionShape2D
 CharacterBody2D
-Panel

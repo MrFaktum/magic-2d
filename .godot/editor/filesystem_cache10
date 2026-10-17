@@ -1,5 +1,5 @@
 9cad1ddce9e5a63143ba340c9520626b
-::res://::1792202806
+::res://::1792206711
 export_presets.cfg::TextFile::-1::1792200572::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5569347155860008243::1791504807::1791504807::1::::<><><>0<>0<>5dbc0b60fc3836dbf5132558556d85b8<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://android/::1792190191
@@ -22,15 +22,19 @@ Tilemap_color4.png::CompressedTexture2D::322242857863289855::1791504807::1791504
 Tilemap_color5.png::CompressedTexture2D::6158447219856596926::1791504807::1791504807::1::::<><><>0<>0<>39009e5759c4b36452b24fb7da083f0d<>res://.godot/imported/Tilemap_color5.png-a6913ca9dd05c59d1176d1bac958bec2.ctex::
 Water Background color.png::CompressedTexture2D::4237785973450579714::1791504807::1791504807::1::::<><><>0<>0<>1e0ae2d084a186db9fc01ffeb76478c1<>res://.godot/imported/Water Background color.png-d7965ca2071626b0a87ce516c6c694b5.ctex::
 Water Foam.png::CompressedTexture2D::1713650905591882253::1791504807::1791504807::1::::<><><>0<>0<>5216e26fc0ec18b8647125c799780a5f<>res://.godot/imported/Water Foam.png-01e0d4650c8b30962edbe5aa63b8c620.ctex::
-::res://scn/::1791504807
+::res://scn/::1792206711
 ::res://scn/level1/::1792200495
 level_1.tscn::PackedScene::8123003458550165996::1792200495::0::1::::<><><>0<>0<><>::uid://bsmmtmt4v6dt6::::res://assets/tileset/Tilemap_color2.png<>uid://c1tv2ue6g5new::::res://scn/player/player.tscn
 ::res://scn/main/::1792200131
 main.gd::GDScript::6376467189234012675::1791504807::0::1::::<>Control<><>0<>0<><>::
 main.tscn::PackedScene::3727346008957833202::1792200131::0::1::::<><><>0<>0<><>::uid://cw32qoltfn5qt::::res://scn/main/main.gd
-::res://scn/player/::1792202745
+::res://scn/player/::1792206453
 aim.gd::GDScript::7748834609589258123::1792199347::0::1::::<>Polygon2D<><>0<>0<><>::
-player.gd::GDScript::6497515034608464248::1792199261::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::6638298810649638786::1792202745::0::1::::<><><>0<>0<><>::uid://bal04iwjidpqu::::res://assets/playerWizard/Idle.png<>uid://cytpegtar30v1::::res://scn/player/player.gd<>uid://c6ixtqxixaj65::::res://assets/playerWizard/Run.png<>uid://dswsqihcvxj76::::res://scn/player/skills_manager.gd<>uid://coj3jgfsk3i6d::::res://scn/player/wall.gd<>uid://dinuf6bahbk2v::::res://scn/player/aim.gd
-skills_manager.gd::GDScript::8469199456845757323::1792202510::0::1::::<>Node<><>0<>0<><>::
-wall.gd::GDScript::5775781049744233281::1792202728::0::1::::<>Node<><>0<>0<><>::
+player.gd::GDScript::6497515034608464248::1792206452::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::6638298810649638786::1792206815::0::1::::<><><>0<>0<><>::uid://bal04iwjidpqu::::res://assets/playerWizard/Idle.png<>uid://cytpegtar30v1::::res://scn/player/player.gd<>uid://c6ixtqxixaj65::::res://assets/playerWizard/Run.png<>uid://dinuf6bahbk2v::::res://scn/player/aim.gd
+::res://scn/player/playerSkills/::0
+spawn_wall.gd::GDScript::5775781049744233281::1792206452::0::1::::<>Node<><>0<>0<><>::
+skills_manager.gd::GDScript::8469199456845757323::1792206815::0::1::::<>Node<><>0<>0<><>::
+::res://scn/scnSkills/::1792204433
+::res://scn/scnSkills/wall/::1792204774
+wall.tscn::PackedScene::5431075681418155194::1792204774::0::1::::<><><>0<>0<><>::

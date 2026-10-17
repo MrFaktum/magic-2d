@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bal04iwjidpqu" path="res://assets/playerWizard/Idle.png" id="1_4l2mt"]
 [ext_resource type="Script" uid="uid://cytpegtar30v1" path="res://scn/player/player.gd" id="1_5k6xf"]
 [ext_resource type="Texture2D" uid="uid://c6ixtqxixaj65" path="res://assets/playerWizard/Run.png" id="3_b8k3h"]
-[ext_resource type="Script" uid="uid://dswsqihcvxj76" path="res://scn/player/skills_manager.gd" id="4_m1arm"]
-[ext_resource type="Script" uid="uid://coj3jgfsk3i6d" path="res://scn/player/wall.gd" id="4_tcdqb"]
+[ext_resource type="Script" uid="uid://dswsqihcvxj76" path="res://scn/player/playerSkills/skills_manager.gd" id="4_fdbhw"]
 [ext_resource type="Script" uid="uid://dinuf6bahbk2v" path="res://scn/player/aim.gd" id="6_m1arm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc6d"]
@@ -193,10 +192,9 @@ action_down = &"skills_down"
 [node name="Scripts" type="Node" parent="." unique_id=1666392708]
 
 [node name="SkillsManager" type="Node" parent="Scripts" unique_id=2088559526]
-script = ExtResource("4_m1arm")
+script = ExtResource("4_fdbhw")
 
-[node name="Wall" type="Node" parent="Scripts" unique_id=1599717730]
-script = ExtResource("4_tcdqb")
+[node name="SpawnWall" type="Node" parent="Scripts" unique_id=1599717730]
 
 [node name="Aim" type="Polygon2D" parent="." unique_id=682073181]
 offset = Vector2(50, 0)
